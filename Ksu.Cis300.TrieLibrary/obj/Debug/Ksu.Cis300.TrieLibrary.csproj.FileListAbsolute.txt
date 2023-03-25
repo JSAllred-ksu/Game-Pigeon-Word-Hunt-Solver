@@ -1,0 +1,6 @@
+C:\Users\jsamu\Source\Repos\lab-assignment-24-JSAllred-ksu\Ksu.Cis300.TrieLibrary\bin\Debug\Ksu.Cis300.TrieLibrary.dll
+C:\Users\jsamu\Source\Repos\lab-assignment-24-JSAllred-ksu\Ksu.Cis300.TrieLibrary\bin\Debug\Ksu.Cis300.TrieLibrary.pdb
+C:\Users\jsamu\Source\Repos\lab-assignment-24-JSAllred-ksu\Ksu.Cis300.TrieLibrary\obj\Debug\Ksu.Cis300.TrieLibrary.csproj.AssemblyReference.cache
+C:\Users\jsamu\Source\Repos\lab-assignment-24-JSAllred-ksu\Ksu.Cis300.TrieLibrary\obj\Debug\Ksu.Cis300.TrieLibrary.csproj.CoreCompileInputs.cache
+C:\Users\jsamu\Source\Repos\lab-assignment-24-JSAllred-ksu\Ksu.Cis300.TrieLibrary\obj\Debug\Ksu.Cis300.TrieLibrary.dll
+C:\Users\jsamu\Source\Repos\lab-assignment-24-JSAllred-ksu\Ksu.Cis300.TrieLibrary\obj\Debug\Ksu.Cis300.TrieLibrary.pdb

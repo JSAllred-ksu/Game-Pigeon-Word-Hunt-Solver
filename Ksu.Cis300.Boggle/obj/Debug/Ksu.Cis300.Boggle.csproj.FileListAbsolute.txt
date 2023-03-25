@@ -1,0 +1,14 @@
+C:\Users\jsamu\Source\Repos\lab-assignment-24-JSAllred-ksu\Ksu.Cis300.Boggle\bin\Debug\Ksu.Cis300.Boggle.exe.config
+C:\Users\jsamu\Source\Repos\lab-assignment-24-JSAllred-ksu\Ksu.Cis300.Boggle\bin\Debug\Ksu.Cis300.Boggle.exe
+C:\Users\jsamu\Source\Repos\lab-assignment-24-JSAllred-ksu\Ksu.Cis300.Boggle\bin\Debug\Ksu.Cis300.Boggle.pdb
+C:\Users\jsamu\Source\Repos\lab-assignment-24-JSAllred-ksu\Ksu.Cis300.Boggle\bin\Debug\Ksu.Cis300.TrieLibrary.dll
+C:\Users\jsamu\Source\Repos\lab-assignment-24-JSAllred-ksu\Ksu.Cis300.Boggle\bin\Debug\Ksu.Cis300.TrieLibrary.pdb
+C:\Users\jsamu\Source\Repos\lab-assignment-24-JSAllred-ksu\Ksu.Cis300.Boggle\obj\Debug\Ksu.Cis300.Boggle.csproj.AssemblyReference.cache
+C:\Users\jsamu\Source\Repos\lab-assignment-24-JSAllred-ksu\Ksu.Cis300.Boggle\obj\Debug\Ksu.Cis300.Boggle.csproj.SuggestedBindingRedirects.cache
+C:\Users\jsamu\Source\Repos\lab-assignment-24-JSAllred-ksu\Ksu.Cis300.Boggle\obj\Debug\Ksu.Cis300.Boggle.Properties.Resources.resources
+C:\Users\jsamu\Source\Repos\lab-assignment-24-JSAllred-ksu\Ksu.Cis300.Boggle\obj\Debug\Ksu.Cis300.Boggle.UserInterface.resources
+C:\Users\jsamu\Source\Repos\lab-assignment-24-JSAllred-ksu\Ksu.Cis300.Boggle\obj\Debug\Ksu.Cis300.Boggle.csproj.GenerateResource.cache
+C:\Users\jsamu\Source\Repos\lab-assignment-24-JSAllred-ksu\Ksu.Cis300.Boggle\obj\Debug\Ksu.Cis300.Boggle.csproj.CoreCompileInputs.cache
+C:\Users\jsamu\Source\Repos\lab-assignment-24-JSAllred-ksu\Ksu.Cis300.Boggle\obj\Debug\Ksu.Cis300.Boggle.csproj.CopyComplete
+C:\Users\jsamu\Source\Repos\lab-assignment-24-JSAllred-ksu\Ksu.Cis300.Boggle\obj\Debug\Ksu.Cis300.Boggle.exe
+C:\Users\jsamu\Source\Repos\lab-assignment-24-JSAllred-ksu\Ksu.Cis300.Boggle\obj\Debug\Ksu.Cis300.Boggle.pdb
