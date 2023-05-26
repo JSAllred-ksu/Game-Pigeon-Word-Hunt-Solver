@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using Ksu.Cis300.TrieLibrary;
 using System.IO;
 using System.Data.Common;
+using System.Windows.Forms;
 
 namespace Ksu.Cis300.Boggle
 {
@@ -31,14 +32,14 @@ namespace Ksu.Cis300.Boggle
         /// <summary>
         /// The Boggle board contents.
         /// </summary>
-        private string[,] _board;
+        private TextBox[,] _board;
 
         /// <summary>
         /// Constructs a new WordFinder for the given Boggle board and word list.
         /// </summary>
         /// <param name="board">The Boggle board.</param>
         /// <param name="fn">The name of the file containing the word list.</param>
-        public WordFinder(string[,] board, string fn)
+        public WordFinder(TextBox[,] board, string fn)
         {
             _board = board;
             using (StreamReader input = File.OpenText(fn))
@@ -48,7 +49,7 @@ namespace Ksu.Cis300.Boggle
                     string word = input.ReadLine();
                     if (word.Length >= _minimumWordLength)
                     {
-                        _wordList = _wordList.Add(word);
+                        _wordList = _wordList.Add(word.ToUpper());
                     }
                 }
             }
@@ -67,21 +68,21 @@ namespace Ksu.Cis300.Boggle
         private ITrie FindWords(int row, int column, bool[,] used, StringBuilder path, ITrie completions, ITrie words)
         {
             ITrie foundWords = words;
-            ITrie nextCompletions = completions.GetCompletions(_board[row, column]);
-            
+            ITrie nextCompletions = completions.GetCompletions(_board[row, column].Text);
+
             if (nextCompletions == null)
             {
                 return foundWords;
             }
-            
+
             used[row, column] = true;
-            path.Append(_board[row, column]);
-            
+            path.Append(_board[row, column].Text);
+
             if (nextCompletions.Contains(""))
             {
                 foundWords = foundWords.Add(path.ToString());
             }
-            
+
             for (int i = Math.Max(0, row - 1); i <= Math.Min(UserInterface.GridSize - 1, row + 1); i++)
             {
                 for (int j = Math.Max(0, column - 1); j <= Math.Min(UserInterface.GridSize - 1, column + 1); j++)
@@ -93,7 +94,7 @@ namespace Ksu.Cis300.Boggle
                 }
             }
 
-            path.Length -= _board[row, column].Length;
+            path.Length -= _board[row, column].Text.Length;
             used[row, column] = false;
             return foundWords;
         }
@@ -108,11 +109,11 @@ namespace Ksu.Cis300.Boggle
             bool[,] used = new bool[UserInterface.GridSize, UserInterface.GridSize];
             StringBuilder prefix = new StringBuilder();
 
-            for(int i = 0; i < UserInterface.GridSize; i++)
+            for (int i = 0; i < UserInterface.GridSize; i++)
             {
-                for(int j = 0; j < UserInterface.GridSize; j++)
+                for (int j = 0; j < UserInterface.GridSize; j++)
                 {
-                    results = FindWords(i, j, used, prefix, _wordList, results);                
+                    results = FindWords(i, j, used, prefix, _wordList, results);
                 }
             }
             return results;

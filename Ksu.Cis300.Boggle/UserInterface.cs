@@ -91,7 +91,11 @@ namespace Ksu.Cis300.Boggle
                 FlowLayoutPanel row = (FlowLayoutPanel)uxBoard.Controls[i];
                 for (int j = 0; j < GridSize; j++)
                 {
-                    _board[i, j] = "";
+                    TextBox textBox = new TextBox();
+                    textBox.MaxLength = 1;
+                    textBox.CharacterCasing = CharacterCasing.Upper; // optional - force uppercase
+                    row.Controls.Add(textBox);
+                    _board[i, j] = textBox.Text;
                 }
             }
         }
@@ -106,13 +110,40 @@ namespace Ksu.Cis300.Boggle
             uxOpenDialog.ShowDialog();
             try
             {
-                _wordFinder = new WordFinder(_board, uxOpenDialog.FileName);
+                string[,] letters = new string[UserInterface.GridSize, UserInterface.GridSize];
+                for (int i = 0; i < UserInterface.GridSize; i++)
+                {
+                    FlowLayoutPanel row = (FlowLayoutPanel)uxBoard.Controls[i];
+                    for (int j = 0; j < UserInterface.GridSize; j++)
+                    {
+                        TextBox textBox = (TextBox)row.Controls[j];
+                        letters[i, j] = textBox.Text;
+                    }
+                }
+
+                _wordFinder = new WordFinder(CreateTextBoxArray(letters), uxOpenDialog.FileName);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
                 Application.Exit();
             }
+        }
+
+        private TextBox[,] CreateTextBoxArray(string[,] letters)
+        {
+            int size = letters.GetLength(0);
+            TextBox[,] textBoxArray = new TextBox[size, size];
+            for (int i = 0; i < size; i++)
+            {
+                for (int j = 0; j < size; j++)
+                {
+                    TextBox textBox = new TextBox();
+                    textBox.Text = letters[i, j];
+                    textBoxArray[i, j] = textBox;
+                }
+            }
+            return textBoxArray;
         }
 
         /// <summary>
