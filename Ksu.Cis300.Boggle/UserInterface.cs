@@ -110,18 +110,7 @@ namespace Ksu.Cis300.Boggle
             uxOpenDialog.ShowDialog();
             try
             {
-                string[,] letters = new string[UserInterface.GridSize, UserInterface.GridSize];
-                for (int i = 0; i < UserInterface.GridSize; i++)
-                {
-                    FlowLayoutPanel row = (FlowLayoutPanel)uxBoard.Controls[i];
-                    for (int j = 0; j < UserInterface.GridSize; j++)
-                    {
-                        TextBox textBox = (TextBox)row.Controls[j];
-                        letters[i, j] = textBox.Text;
-                    }
-                }
-
-                _wordFinder = new WordFinder(CreateTextBoxArray(letters), uxOpenDialog.FileName);
+                _wordFinder = new WordFinder(uxOpenDialog.FileName);
             }
             catch (Exception ex)
             {

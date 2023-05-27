@@ -32,16 +32,14 @@ namespace Ksu.Cis300.Boggle
         /// <summary>
         /// The Boggle board contents.
         /// </summary>
-        private TextBox[,] _board;
+        private string[,] _board = new string[UserInterface.GridSize, UserInterface.GridSize];
 
         /// <summary>
-        /// Constructs a new WordFinder for the given Boggle board and word list.
+        /// Constructs a new WordFinder for the given word list.
         /// </summary>
-        /// <param name="board">The Boggle board.</param>
         /// <param name="fn">The name of the file containing the word list.</param>
-        public WordFinder(TextBox[,] board, string fn)
+        public WordFinder(string fn)
         {
-            _board = board;
             using (StreamReader input = File.OpenText(fn))
             {
                 while (!input.EndOfStream)
@@ -49,26 +47,16 @@ namespace Ksu.Cis300.Boggle
                     string word = input.ReadLine();
                     if (word.Length >= _minimumWordLength)
                     {
-                        _wordList = _wordList.Add(word.ToUpper());
+                        _wordList = _wordList.Add(word);
                     }
                 }
             }
         }
 
-        /// <summary>
-        /// finds available words on the board given the dictionary selected
-        /// </summary>
-        /// <param name="row"></param>
-        /// <param name="column"></param>
-        /// <param name="used"></param>
-        /// <param name="path"></param>
-        /// <param name="completions"></param>
-        /// <param name="words"></param>
-        /// <returns>found words</returns>
         private ITrie FindWords(int row, int column, bool[,] used, StringBuilder path, ITrie completions, ITrie words)
         {
             ITrie foundWords = words;
-            ITrie nextCompletions = completions.GetCompletions(_board[row, column].Text);
+            ITrie nextCompletions = completions.GetCompletions(_board[row, column]);
 
             if (nextCompletions == null)
             {
@@ -76,7 +64,7 @@ namespace Ksu.Cis300.Boggle
             }
 
             used[row, column] = true;
-            path.Append(_board[row, column].Text);
+            path.Append(_board[row, column]);
 
             if (nextCompletions.Contains(""))
             {
@@ -94,7 +82,7 @@ namespace Ksu.Cis300.Boggle
                 }
             }
 
-            path.Length -= _board[row, column].Text.Length;
+            path.Length -= _board[row, column].Length;
             used[row, column] = false;
             return foundWords;
         }
