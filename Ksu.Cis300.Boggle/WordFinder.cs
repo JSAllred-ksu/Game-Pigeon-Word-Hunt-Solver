@@ -1,6 +1,13 @@
 ﻿/* WordFinder.cs
  * Author: Rod Howell
  * Edited by: Samuel Allred
+
+In the `WordFinder` class:
+
+1. Change the `_board` field to a 4x4 array.
+2. In the `WordFinder` constructor, remove the `_board` parameter and its use, since the board is now passed as user input in `UserInterface`.
+3. Update the `FindWords` method to use `UserInterface.GridSize` instead of `_board.GetLength(0)`.
+
  */
 using System;
 using System.Collections.Generic;
@@ -38,8 +45,9 @@ namespace Ksu.Cis300.Boggle
         /// Constructs a new WordFinder for the given word list.
         /// </summary>
         /// <param name="fn">The name of the file containing the word list.</param>
-        public WordFinder(string fn)
+        public WordFinder(string[,] board, string fn)
         {
+            _board = board;
             using (StreamReader input = File.OpenText(fn))
             {
                 while (!input.EndOfStream)

@@ -37,31 +37,14 @@
             this.uxFindWords = new System.Windows.Forms.ToolStripButton();
             this.uxBoard = new System.Windows.Forms.FlowLayoutPanel();
             this.uxRow0 = new System.Windows.Forms.FlowLayoutPanel();
-            this.uxDie01 = new System.Windows.Forms.Button();
-            this.uxDie02 = new System.Windows.Forms.Button();
-            this.uxDie03 = new System.Windows.Forms.Button();
             this.uxRow1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.uxDie10 = new System.Windows.Forms.Button();
-            this.uxDie11 = new System.Windows.Forms.Button();
-            this.uxDie12 = new System.Windows.Forms.Button();
-            this.uxDie13 = new System.Windows.Forms.Button();
             this.uxRow2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.uxDie20 = new System.Windows.Forms.Button();
-            this.uxDie21 = new System.Windows.Forms.Button();
-            this.uxDie22 = new System.Windows.Forms.Button();
-            this.uxDie23 = new System.Windows.Forms.Button();
             this.uxRow3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.uxDie30 = new System.Windows.Forms.Button();
-            this.uxDie31 = new System.Windows.Forms.Button();
-            this.uxDie32 = new System.Windows.Forms.Button();
-            this.uxDie33 = new System.Windows.Forms.Button();
             this.uxRow4 = new System.Windows.Forms.FlowLayoutPanel();
             this.uxMenuBar.SuspendLayout();
             this.uxBoard.SuspendLayout();
             this.uxRow0.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
-            this.uxRow2.SuspendLayout();
             this.uxRow3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,7 +56,7 @@
             this.uxWordsFound.FormattingEnabled = true;
             this.uxWordsFound.ItemHeight = 29;
             this.uxWordsFound.Location = new System.Drawing.Point(597, 58);
-            this.uxWordsFound.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uxWordsFound.Margin = new System.Windows.Forms.Padding(4);
             this.uxWordsFound.Name = "uxWordsFound";
             this.uxWordsFound.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.uxWordsFound.Size = new System.Drawing.Size(296, 439);
@@ -135,16 +118,13 @@
             this.uxBoard.Controls.Add(this.uxRow2);
             this.uxBoard.Controls.Add(this.uxRow3);
             this.uxBoard.Location = new System.Drawing.Point(16, 34);
-            this.uxBoard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uxBoard.Margin = new System.Windows.Forms.Padding(4);
             this.uxBoard.Name = "uxBoard";
             this.uxBoard.Size = new System.Drawing.Size(545, 503);
             this.uxBoard.TabIndex = 27;
             // 
             // uxRow0
             // 
-            this.uxRow0.Controls.Add(this.uxDie01);
-            this.uxRow0.Controls.Add(this.uxDie02);
-            this.uxRow0.Controls.Add(this.uxDie03);
             this.uxRow0.Controls.Add(this.uxRow1);
             this.uxRow0.Location = new System.Drawing.Point(0, 0);
             this.uxRow0.Margin = new System.Windows.Forms.Padding(0);
@@ -152,39 +132,9 @@
             this.uxRow0.Size = new System.Drawing.Size(544, 126);
             this.uxRow0.TabIndex = 0;
             // 
-            // uxDie01
-            // 
-            this.uxDie01.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxDie01.Location = new System.Drawing.Point(0, 0);
-            this.uxDie01.Margin = new System.Windows.Forms.Padding(0);
-            this.uxDie01.Name = "uxDie01";
-            this.uxDie01.Size = new System.Drawing.Size(136, 126);
-            this.uxDie01.TabIndex = 1;
-            this.uxDie01.UseVisualStyleBackColor = true;
-            // 
-            // uxDie02
-            // 
-            this.uxDie02.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxDie02.Location = new System.Drawing.Point(136, 0);
-            this.uxDie02.Margin = new System.Windows.Forms.Padding(0);
-            this.uxDie02.Name = "uxDie02";
-            this.uxDie02.Size = new System.Drawing.Size(136, 126);
-            this.uxDie02.TabIndex = 2;
-            this.uxDie02.UseVisualStyleBackColor = true;
-            // 
-            // uxDie03
-            // 
-            this.uxDie03.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxDie03.Location = new System.Drawing.Point(272, 0);
-            this.uxDie03.Margin = new System.Windows.Forms.Padding(0);
-            this.uxDie03.Name = "uxDie03";
-            this.uxDie03.Size = new System.Drawing.Size(136, 126);
-            this.uxDie03.TabIndex = 3;
-            this.uxDie03.UseVisualStyleBackColor = true;
-            // 
             // uxRow1
             // 
-            this.uxRow1.Location = new System.Drawing.Point(0, 126);
+            this.uxRow1.Location = new System.Drawing.Point(0, 0);
             this.uxRow1.Margin = new System.Windows.Forms.Padding(0);
             this.uxRow1.Name = "uxRow1";
             this.uxRow1.Size = new System.Drawing.Size(680, 126);
@@ -192,114 +142,22 @@
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Controls.Add(this.uxDie10);
-            this.flowLayoutPanel2.Controls.Add(this.uxDie11);
-            this.flowLayoutPanel2.Controls.Add(this.uxDie12);
-            this.flowLayoutPanel2.Controls.Add(this.uxDie13);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 126);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(544, 126);
             this.flowLayoutPanel2.TabIndex = 6;
             // 
-            // uxDie10
-            // 
-            this.uxDie10.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxDie10.Location = new System.Drawing.Point(0, 0);
-            this.uxDie10.Margin = new System.Windows.Forms.Padding(0);
-            this.uxDie10.Name = "uxDie10";
-            this.uxDie10.Size = new System.Drawing.Size(136, 126);
-            this.uxDie10.TabIndex = 1;
-            this.uxDie10.UseVisualStyleBackColor = true;
-            // 
-            // uxDie11
-            // 
-            this.uxDie11.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxDie11.Location = new System.Drawing.Point(136, 0);
-            this.uxDie11.Margin = new System.Windows.Forms.Padding(0);
-            this.uxDie11.Name = "uxDie11";
-            this.uxDie11.Size = new System.Drawing.Size(136, 126);
-            this.uxDie11.TabIndex = 2;
-            this.uxDie11.UseVisualStyleBackColor = true;
-            // 
-            // uxDie12
-            // 
-            this.uxDie12.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxDie12.Location = new System.Drawing.Point(272, 0);
-            this.uxDie12.Margin = new System.Windows.Forms.Padding(0);
-            this.uxDie12.Name = "uxDie12";
-            this.uxDie12.Size = new System.Drawing.Size(136, 126);
-            this.uxDie12.TabIndex = 3;
-            this.uxDie12.UseVisualStyleBackColor = true;
-            // 
-            // uxDie13
-            // 
-            this.uxDie13.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxDie13.Location = new System.Drawing.Point(408, 0);
-            this.uxDie13.Margin = new System.Windows.Forms.Padding(0);
-            this.uxDie13.Name = "uxDie13";
-            this.uxDie13.Size = new System.Drawing.Size(136, 126);
-            this.uxDie13.TabIndex = 4;
-            this.uxDie13.UseVisualStyleBackColor = true;
-            // 
             // uxRow2
             // 
-            this.uxRow2.Controls.Add(this.uxDie20);
-            this.uxRow2.Controls.Add(this.uxDie21);
-            this.uxRow2.Controls.Add(this.uxDie22);
-            this.uxRow2.Controls.Add(this.uxDie23);
             this.uxRow2.Location = new System.Drawing.Point(0, 252);
             this.uxRow2.Margin = new System.Windows.Forms.Padding(0);
             this.uxRow2.Name = "uxRow2";
             this.uxRow2.Size = new System.Drawing.Size(544, 126);
             this.uxRow2.TabIndex = 7;
             // 
-            // uxDie20
-            // 
-            this.uxDie20.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxDie20.Location = new System.Drawing.Point(0, 0);
-            this.uxDie20.Margin = new System.Windows.Forms.Padding(0);
-            this.uxDie20.Name = "uxDie20";
-            this.uxDie20.Size = new System.Drawing.Size(136, 126);
-            this.uxDie20.TabIndex = 2;
-            this.uxDie20.UseVisualStyleBackColor = true;
-            // 
-            // uxDie21
-            // 
-            this.uxDie21.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxDie21.Location = new System.Drawing.Point(136, 0);
-            this.uxDie21.Margin = new System.Windows.Forms.Padding(0);
-            this.uxDie21.Name = "uxDie21";
-            this.uxDie21.Size = new System.Drawing.Size(136, 126);
-            this.uxDie21.TabIndex = 3;
-            this.uxDie21.UseVisualStyleBackColor = true;
-            // 
-            // uxDie22
-            // 
-            this.uxDie22.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxDie22.Location = new System.Drawing.Point(272, 0);
-            this.uxDie22.Margin = new System.Windows.Forms.Padding(0);
-            this.uxDie22.Name = "uxDie22";
-            this.uxDie22.Size = new System.Drawing.Size(136, 126);
-            this.uxDie22.TabIndex = 4;
-            this.uxDie22.UseVisualStyleBackColor = true;
-            // 
-            // uxDie23
-            // 
-            this.uxDie23.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxDie23.Location = new System.Drawing.Point(408, 0);
-            this.uxDie23.Margin = new System.Windows.Forms.Padding(0);
-            this.uxDie23.Name = "uxDie23";
-            this.uxDie23.Size = new System.Drawing.Size(136, 126);
-            this.uxDie23.TabIndex = 5;
-            this.uxDie23.UseVisualStyleBackColor = true;
-            // 
             // uxRow3
             // 
-            this.uxRow3.Controls.Add(this.uxDie30);
-            this.uxRow3.Controls.Add(this.uxDie31);
-            this.uxRow3.Controls.Add(this.uxDie32);
-            this.uxRow3.Controls.Add(this.uxDie33);
             this.uxRow3.Controls.Add(this.uxRow4);
             this.uxRow3.Location = new System.Drawing.Point(0, 378);
             this.uxRow3.Margin = new System.Windows.Forms.Padding(0);
@@ -307,49 +165,9 @@
             this.uxRow3.Size = new System.Drawing.Size(544, 126);
             this.uxRow3.TabIndex = 8;
             // 
-            // uxDie30
-            // 
-            this.uxDie30.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxDie30.Location = new System.Drawing.Point(0, 0);
-            this.uxDie30.Margin = new System.Windows.Forms.Padding(0);
-            this.uxDie30.Name = "uxDie30";
-            this.uxDie30.Size = new System.Drawing.Size(136, 126);
-            this.uxDie30.TabIndex = 0;
-            this.uxDie30.UseVisualStyleBackColor = true;
-            // 
-            // uxDie31
-            // 
-            this.uxDie31.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxDie31.Location = new System.Drawing.Point(136, 0);
-            this.uxDie31.Margin = new System.Windows.Forms.Padding(0);
-            this.uxDie31.Name = "uxDie31";
-            this.uxDie31.Size = new System.Drawing.Size(136, 126);
-            this.uxDie31.TabIndex = 1;
-            this.uxDie31.UseVisualStyleBackColor = true;
-            // 
-            // uxDie32
-            // 
-            this.uxDie32.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxDie32.Location = new System.Drawing.Point(272, 0);
-            this.uxDie32.Margin = new System.Windows.Forms.Padding(0);
-            this.uxDie32.Name = "uxDie32";
-            this.uxDie32.Size = new System.Drawing.Size(136, 126);
-            this.uxDie32.TabIndex = 2;
-            this.uxDie32.UseVisualStyleBackColor = true;
-            // 
-            // uxDie33
-            // 
-            this.uxDie33.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxDie33.Location = new System.Drawing.Point(408, 0);
-            this.uxDie33.Margin = new System.Windows.Forms.Padding(0);
-            this.uxDie33.Name = "uxDie33";
-            this.uxDie33.Size = new System.Drawing.Size(136, 126);
-            this.uxDie33.TabIndex = 3;
-            this.uxDie33.UseVisualStyleBackColor = true;
-            // 
             // uxRow4
             // 
-            this.uxRow4.Location = new System.Drawing.Point(0, 126);
+            this.uxRow4.Location = new System.Drawing.Point(0, 0);
             this.uxRow4.Margin = new System.Windows.Forms.Padding(0);
             this.uxRow4.Name = "uxRow4";
             this.uxRow4.Size = new System.Drawing.Size(680, 126);
@@ -366,15 +184,13 @@
             this.Controls.Add(this.uxWordsFound);
             this.Controls.Add(this.uxWordsFoundLabel);
             this.Controls.Add(this.uxMenuBar);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserInterface";
-            this.Text = "Word Hunt Solver";
+            this.Text = "Game Pigeon: Word Hunt Solver";
             this.uxMenuBar.ResumeLayout(false);
             this.uxMenuBar.PerformLayout();
             this.uxBoard.ResumeLayout(false);
             this.uxRow0.ResumeLayout(false);
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.uxRow2.ResumeLayout(false);
             this.uxRow3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -390,25 +206,10 @@
         private System.Windows.Forms.ToolStripButton uxFindWords;
         private System.Windows.Forms.FlowLayoutPanel uxBoard;
         private System.Windows.Forms.FlowLayoutPanel uxRow0;
-        private System.Windows.Forms.Button uxDie01;
-        private System.Windows.Forms.Button uxDie02;
-        private System.Windows.Forms.Button uxDie03;
         private System.Windows.Forms.FlowLayoutPanel uxRow1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Button uxDie10;
-        private System.Windows.Forms.Button uxDie11;
-        private System.Windows.Forms.Button uxDie12;
-        private System.Windows.Forms.Button uxDie13;
         private System.Windows.Forms.FlowLayoutPanel uxRow2;
-        private System.Windows.Forms.Button uxDie20;
-        private System.Windows.Forms.Button uxDie21;
-        private System.Windows.Forms.Button uxDie22;
-        private System.Windows.Forms.Button uxDie23;
         private System.Windows.Forms.FlowLayoutPanel uxRow3;
-        private System.Windows.Forms.Button uxDie30;
-        private System.Windows.Forms.Button uxDie31;
-        private System.Windows.Forms.Button uxDie32;
-        private System.Windows.Forms.Button uxDie33;
         private System.Windows.Forms.FlowLayoutPanel uxRow4;
     }
 }

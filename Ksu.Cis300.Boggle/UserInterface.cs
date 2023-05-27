@@ -1,5 +1,5 @@
 ﻿/* UserInterface.cs
- * Author: Rod Howell
+ * Author: Samuel Allred
  */
 using System;
 using System.Collections.Generic;
@@ -36,38 +36,6 @@ namespace Ksu.Cis300.Boggle
         private WordFinder _wordFinder;
 
         /// <summary>
-        /// The dice.
-        /// </summary>
-        private string[][] _dice = new string[][]
-        {
-            new string[] { "A", "F", "I", "R", "S", "Y" },
-            new string[] { "A", "D", "E", "N", "N", "N" },
-            new string[] { "A", "E", "E", "E", "E", "M" },
-            new string[] { "A", "A", "A", "F", "R", "S" },
-            new string[] { "A", "E", "G", "M", "N", "N" },
-            new string[] { "A", "A", "E", "E", "E", "E" },
-            new string[] { "A", "E", "E", "G", "M", "U" },
-            new string[] { "A", "A", "F", "I", "R", "S" },
-            new string[] { "B", "J", "K", "Qu", "X", "Z" },
-            new string[] { "C", "C", "E", "N", "S", "T" },
-            new string[] { "C", "E", "I", "L", "P", "T" },
-            new string[] { "C", "E", "I", "I", "L", "T" },
-            new string[] { "C", "E", "I", "P", "S", "T" },
-            new string[] { "D", "H", "L", "N", "O", "R" },
-            new string[] { "D", "H", "L", "N", "O", "R" },
-            new string[] { "D", "D", "H", "N", "O", "T" },
-            new string[] { "D", "H", "H", "L", "O", "R" },
-            new string[] { "E", "N", "S", "S", "S", "U" },
-            new string[] { "E", "M", "O", "T", "T", "T" },
-            new string[] { "E", "I", "I", "I", "T", "T" },
-            new string[] { "F", "I", "P", "R", "S", "Y" },
-            new string[] { "G", "O", "R", "R", "V", "W" },
-            new string[] { "I", "P", "R", "R", "R", "Y" },
-            new string[] { "N", "O", "O", "T", "U", "W" },
-            new string[] { "O", "O", "O", "T", "T", "U" }
-        };
-
-        /// <summary>
         /// The random number generator.
         /// </summary>
         private Random _randomNumbers = new Random();
@@ -86,16 +54,47 @@ namespace Ksu.Cis300.Boggle
         /// </summary>
         private void GenerateNewBoard()
         {
+            uxBoard.Controls.Clear();
             for (int i = 0; i < GridSize; i++)
             {
-                FlowLayoutPanel row = (FlowLayoutPanel)uxBoard.Controls[i];
+                FlowLayoutPanel row = new FlowLayoutPanel();
+                row.AutoSize = true;
+                row.FlowDirection = FlowDirection.LeftToRight;
+                row.WrapContents = false;
+                uxBoard.Controls.Add(row);
+
                 for (int j = 0; j < GridSize; j++)
                 {
                     TextBox textBox = new TextBox();
                     textBox.MaxLength = 1;
                     textBox.CharacterCasing = CharacterCasing.Upper; // optional - force uppercase
-                    row.Controls.Add(textBox);
-                    _board[i, j] = textBox.Text;
+
+                    // Prompt the user to enter a character
+                    Form prompt = new Form();//
+                    prompt.Width = 200;
+                    prompt.Height = 150;
+                    prompt.Text = "Game Pigeon: Word Hunt Solver";
+                    Label promptLabel = new Label() { Left = 50, Top = 20, Text = "Enter a character for the cell " + j};
+                    TextBox promptTextBox = new TextBox() { Left = 50, Top = 50, Width = 100 };
+                    Button confirmation = new Button() { Text = "Ok", Left = 50, Top = 80, Width = 50, DialogResult = DialogResult.OK };
+                    confirmation.Click += (sender, e) => { prompt.Close(); };
+                    prompt.Controls.Add(promptLabel);
+                    prompt.Controls.Add(promptTextBox);
+                    prompt.Controls.Add(confirmation);
+                    prompt.AcceptButton = confirmation;
+
+                    if (prompt.ShowDialog() == DialogResult.OK)
+                    {
+                        textBox.Text = promptTextBox.Text;
+                        _board[i, j] = textBox.Text;
+                    }
+                    else
+                    {
+                        // Exit the application if user cancels
+                        Application.Exit();
+                    }//
+                    
+                    row.Controls.Add(textBox);                    
                 }
             }
         }
@@ -110,7 +109,7 @@ namespace Ksu.Cis300.Boggle
             uxOpenDialog.ShowDialog();
             try
             {
-                _wordFinder = new WordFinder(uxOpenDialog.FileName);
+                _wordFinder = new WordFinder(_board, uxOpenDialog.FileName);
             }
             catch (Exception ex)
             {
